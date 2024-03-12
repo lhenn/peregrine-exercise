@@ -1,8 +1,3 @@
-#
-# Example AWS resources using terraform. These are for illustrative purposes and
-# are not necessary to complete the prompt but can be created by running
-# terraform apply.
-#
 resource "aws_s3_bucket" "prd_peregrine" {
   bucket = "prd-peregrine"
 
@@ -12,7 +7,13 @@ resource "aws_s3_bucket" "prd_peregrine" {
   }
 }
 
-resource "aws_s3_bucket_acl" "peregrine_bucket_acl" {
-  bucket = aws_s3_bucket.prd_peregrine.id
-  acl    = "private"
-}
+# TODO: determine why it can't create a bucket in us-east-1
+# resource "aws_s3_bucket" "ops_peregrine" {
+#   bucket = "ops-peregrine"
+
+#   tags = {
+#     Name        = "ops-peregrine"
+#     Environment = "Ops"
+#   }
+# }
+

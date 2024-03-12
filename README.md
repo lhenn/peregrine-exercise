@@ -31,3 +31,14 @@ The app can be accessed on port 5000. Example pages:
 
 http://127.0.0.1:5000   
 http://127.0.0.1:5000/version
+
+# Laura's Notes
+
+I wish I had been able to make more progress on this exercise in the given time! It's been a bit since I've worked in AWS so I was a little slower than I would have liked :( However, I'll leave some notes here to indicate what my thinking is on what I would tackle next, if provided more time:
+1. Update the web app's Dockerfile to pull database credentials from secretmanager
+2. Push the Flask web app Docker image to the Elastic Container Registry
+3. Get the Web App running in Amazon Elastic Container Service using AWS Fargate (verify that it is able to connect to the database). Deploy this in the web-app VPC.
+4. Refine the VPC security groups and NACL rules
+5. Debug why I couldn't migrate local terraform state to the remote backend (something odd going on with regions I can access s3 in)
+
+Thanks for the opportunity to do the exercise! 
